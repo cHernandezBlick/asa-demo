@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Roboto Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  </head>
+
+<!-- CSS styling --> 
+  <style>
+    html { 
+    background: url(desktopBackground.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+    body {
+    background: transparent;         
+    }
+    .container {
+    padding: 20px;    
+    text-align: center;
+    }
+    .gif {
+    padding: 5px;
+    position: center;
+    width: 200px;        
+    }
+    .bioimage {
+    padding-bottom: 10px;
+    width: 100%;        
+    }
+    .biotext {
+    padding: 10px;        
+    }
+    .websitelink {
+    text-align: center;
+    background-color: white; 
+    padding: 8px;
+    margin-bottom: 0px;       
+    border-top: 2px black dotted;
+    }
+    .websitelink a{
+    font-size: 35px;
+    text-decoration: none;
+    color: black;
+    }
+    .websitelink:hover {
+    background-color: lightgoldenrodyellow; 
+    }
+    .popover {    
+    font-family: "Roboto", sans-serif;
+    border: 2px black dotted;
+    width: 300px;   
+    height: 200px;
+    border-radius: 0px;
+    overflow-y: scroll;
+    }
+    .popover-header {
+    padding: 10px;
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+    font-size: 35px;
+    border-bottom: 2px black dotted;
+    }
+    .popover-body {
+    text-align: left;
+    font-size: 18px;
+    padding: 0px;
+    }
+
+/* Responsive breakpoints for different screen sizes */
+    @media (max-width: 576px) {
+    .gif {
+    width: 60%;            
+    }       
+    }
+
+/* No scrolling bar */
+    *::-webkit-scrollbar {
+    width: 0px;
+    }
+  </style>
+
+<!-- Content of website body --> 
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-3"></div>
+        <div class="col-12 col-sm-9"><img src="gifs/melon.gif" class="gif"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-8"><img src="gifs/flower.gif" class="gif"></div>
+        <div class="col-12 col-sm-4"><img src="gifs/rock.gif" class="gif"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-2"><img src="gifs/vivienne.gif" id="viv" class="gif" data-rel="popover" data-title="Vivienne" data-content="<img class='bioimage' src='artist tooltip images/vivienneworm.jpg'><p class='biotext'>Vivienne is an artist and a bloomy sun puppy. <p class='websitelink'><a href=''>Website</a>" data-placement="top"></div>
+        <div class="col-12 col-sm-10"></div>
+      </div>
+    </div>
+
+<!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script>
+      $(document).ready(function() {
+          $('[data-rel=popover]').popover({
+            html: true,
+            trigger: "click"
+          });
+        })
+    </script>
+
+<!-- Alternative scripts for less-than-functional Popovers  
+1.
+      <script>
+      $('document').ready(function() {
+          var popOverSettings = {
+              placement: 'top',
+              selector: '#viv',
+              title:'Vivienne',
+              trigger: "click",
+              content: 'Vivienne is an artist and a bloomy sun puppy.'
+          };
+      $(this).popover(popOverSettings);
+      });
+      </script>
+2.
+      <script>
+      $('document').ready(function() {
+      var popOverSettings = {
+        selector: '#viv',
+        trigger: "click"
+      };
+      $(this).popover(popOverSettings);
+      });
+      </script>
+      -->
+
+  </body>
+</html>
