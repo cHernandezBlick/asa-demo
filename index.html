@@ -1,152 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Boostrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!-- Roboto Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  </head>
-
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+   </head>
 <!-- CSS styling --> 
-  <style>
-    html { 
-    background: url(desktopBackground.png) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    body {
-    background: transparent;         
-    }
-    .container {
-    padding: 20px;    
-    text-align: center;
-    }
-    .gif {
-    padding: 5px;
-    position: center;
-    width: 200px;        
-    }
-    .bioimage {
-    padding-bottom: 10px;
-    width: 100%;       
-    }
-    .biotext {
-    padding: 10px;        
-    }
-    .websitelink {
-    text-align: center;
-    background-color: white; 
-    padding: 8px;
-    margin-bottom: 0px;       
-    border-top: 2px black dotted;
-    }
-    .websitelink a{
-    font-size: 35px;
-    text-decoration: none;
-    color: black;
-    }
-    .websitelink:hover {
-    background-color: lightgoldenrodyellow; 
-    }
-    .popover {    
-    font-family: "Roboto", sans-serif;
-    border: 2px black dotted;
-    width: 300px;   
-    height: 200px;
-    border-radius: 0px;
-    overflow-y: scroll;
-    }
-    .popover-header {
-    padding: 10px;
-    background-color: lightgoldenrodyellow;
-    text-align: center;
-    font-size: 35px;
-    border-bottom: 2px black dotted;
-    }
-    .popover-body {
-    text-align: left;
-    font-size: 18px;
-    padding: 0px;
-    }
-
-    .popover .arrow {
-    display: none;
-    }
-
-/* Responsive breakpoints for different screen sizes */
-    @media (max-width: 576px) {
-    .gif {
-    width: 60%;            
-    }       
-    }
-
-/* No scrolling bar */
-    *::-webkit-scrollbar {
-    width: 0px;
-    }
-  </style>
-
+   <style>
+      html { 
+      background: url(desktopBackground.png) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      }
+      body {
+      background: transparent;         
+      }
+      .navbar-brand {
+      padding-top: 5px;
+      padding-right: 20px; 
+      border-right: 1px black solid;     
+      font-size: 20px;
+      }
+      .navbar {
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+      background: lightgoldenrodyellow;
+      border-bottom: 1px black solid;
+      }
+      .navbar a {
+      color: black;
+      }
+      .dropdown-menu {
+      height: 448px;
+      font-size: 20px;
+      overflow-y: scroll;
+      padding: 0px;
+      border: 1px black solid;
+      border-radius: 0px;
+      margin-top: 8px;
+      margin-left: -17px;
+      }
+      .dropdown-item {
+      padding: 10px;
+      }
+      .dropdown-item:hover {
+      background: lightgoldenrodyellow;     
+      }
+      .container {
+      padding: 100px 20px 20px 20px;
+      text-align: center;
+      }
+      .gif {
+      padding: 5px;
+      position: center;
+      width: 200px;        
+      }
+      .bioimage {
+      padding-bottom: 10px;
+      width: 100%;        
+      }
+      .biotext {
+      padding: 10px; 
+      font-size: 15px;       
+      }
+      .websitelink {
+      text-align: center;
+      background-color: white; 
+      padding: 8px;
+      margin-bottom: 0px;       
+      border-top: 1px black solid;
+      }
+      .websitelink a{
+      font-size: 20px;
+      text-decoration: none;
+      color: black;
+      }
+      .websitelink:hover {
+      background-color: lightgoldenrodyellow; 
+      }
+      .popover {    
+      font-family: "Roboto", sans-serif;
+      border: 1px black solid;
+      width: 300px;   
+      height: 200px;
+      border-radius: 0px;
+      overflow-y: scroll;
+      }
+      .popover-header {
+      padding: 10px;
+      background-color: lightgoldenrodyellow;
+      text-align: center;
+      font-size: 35px;
+      border-bottom: 1px black solid;
+      }
+      .popover-body {
+      text-align: left;
+      font-size: 18px;
+      padding: 0px;
+      }
+      .bar1, .bar2, .bar3 {
+      width: 27px;
+      height: 2px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+      }
+      .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+      transform: rotate(-45deg) translate(-6px, 6px);
+      }
+      .change .bar2 {opacity: 0;}
+      .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-5.5px, -5.5px);
+      transform: rotate(45deg) translate(-5.5px, -5.5px);
+      }
+/* Responsive breakpoints for smaller screen sizes */
+      @media (max-width: 576px) {
+      .gif {
+      width: 60%;            
+      }  
+      .dropdown-menu {
+      margin-left: 0px;
+      }     
+      }
+/* No scrolling bar anywhere */
+      *::-webkit-scrollbar {
+      width: 0px;
+      }
+   </style>
 <!-- Content of website body --> 
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-sm-3"></div>
-        <div class="col-12 col-sm-9"><img src="gifs/melon.gif" class="gif"></div>
+   <body>
+      <nav class="navbar navbar-expand-sm fixed-top">
+         <a class="navbar-brand" href="#">✿ Artists ⤶ Supporting ⤷ Artists ✿</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger" onclick="myFunction(this)">
+               <div class="bar1"></div>
+               <div class="bar2"></div>
+               <div class="bar3"></div>
+            </div>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Site Map
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                     <a class="dropdown-item" href="#">Derya</a>
+                     <a class="dropdown-item" href="#">Salem</a>
+                     <a class="dropdown-item" href="#">Vivienne</a>
+                     <a class="dropdown-item" href="#">Cristian</a>
+                     <a class="dropdown-item" href="#">Jaz</a>
+                     <a class="dropdown-item" href="#">Dana</a>
+                     <a class="dropdown-item" href="#">Conor</a>
+                     <a class="dropdown-item" href="#">Nil</a>
+                     <a class="dropdown-item" href="#">Moses</a>
+                     <a class="dropdown-item" href="#">Senaqwila</a>
+                     <a class="dropdown-item" href="#">Kage</a>
+                     <a class="dropdown-item" href="#">Dean</a>
+                     <a class="dropdown-item" href="#">Damla</a>
+                     <a class="dropdown-item" href="#">Haruko</a>
+                     <a class="dropdown-item" href="#">Adassa</a>
+                     <a class="dropdown-item" href="#">Teej</a>
+                     <a class="dropdown-item" href="#">Zion</a>
+                     <a class="dropdown-item" href="#">Hyphea</a>
+                     <a class="dropdown-item" href="#">Thanh</a>
+                     <a class="dropdown-item" href="#">Anita</a>
+                     <a class="dropdown-item" href="#">Grayson</a>
+                     <a class="dropdown-item" href="#">Harmony</a>
+                     <a class="dropdown-item" href="#">Garden Don't Care</a>
+                     <a class="dropdown-item" href="#">Belvedere</a>
+                     <a class="dropdown-item" href="#">Elisabeth Rogers</a>
+                     <a class="dropdown-item" href="#">Sahalli</a>
+                     <a class="dropdown-item" href="#">Mount Pleasant Neighbourhood House</a>
+                     <a class="dropdown-item" href="#">Vines</a>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="container">
+         <div class="row">
+            <div class="col-12 col-sm-3"></div>
+            <div class="col-12 col-sm-9"><img src="gifs/melon.gif" class="gif"></div>
+         </div>
+         <div class="row">
+            <div class="col-12 col-sm-8"><img src="gifs/flower.gif" class="gif"></div>
+            <div class="col-12 col-sm-4"><img src="gifs/rock.gif" class="gif"></div>
+         </div>
+         <div class="row">
+            <div class="col-12 col-sm-2"><img src="gifs/vivienne.gif" id="viv" class="gif" data-rel="popover" data-title="Vivienne" data-content="<img class='bioimage' src='artist tooltip images/vivienneworm.jpg'><p class='biotext'>Vivienne is an artist and a bloomy sun puppy. <p class='websitelink'><a href=''>Website</a>" data-placement="top"></div>
+            <div class="col-12 col-sm-10"></div>
+         </div>
       </div>
-      <div class="row">
-        <div class="col-12 col-sm-8"><img src="gifs/flower.gif" class="gif"></div>
-        <div class="col-12 col-sm-4"><img src="gifs/rock.gif" class="gif"></div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-sm-2"><img src="gifs/vivienne.gif" id="viv" class="gif" data-rel="popover" data-title="Vivienne" data-content="<img class='bioimage' src='artist tooltip images/vivienneworm.jpg'><p class='biotext'>Vivienne is an artist and a bloomy sun puppy. <p class='websitelink'><a href=''>Website</a>" data-placement="top"></div>
-        <div class="col-12 col-sm-10"></div>
-      </div>
-    </div>
-
 <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
-    <script>
-      $(document).ready(function() {
-          $('[data-rel=popover]').popover({
-            html: true,
-            trigger: "click"
-          });
-        })
-    </script>
-
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script>
+/* JS for popover on click */ 
+         $(document).ready(function() {
+             $('[data-rel=popover]').popover({
+               html: true,
+               trigger: "click"
+             });
+           })
+         
+/* JS for hamburger animation */ 
+         function myFunction(x) {
+         x.classList.toggle("change");
+         }
+      </script>
 <!-- Alternative scripts for less-than-functional Popovers  
-1.
-      <script>
-      $('document').ready(function() {
-          var popOverSettings = {
-              placement: 'top',
-              selector: '#viv',
-              title:'Vivienne',
-              trigger: "click",
-              content: 'Vivienne is an artist and a bloomy sun puppy.'
-          };
-      $(this).popover(popOverSettings);
-      });
-      </script>
-2.
-      <script>
-      $('document').ready(function() {
-      var popOverSettings = {
-        selector: '#viv',
-        trigger: "click"
-      };
-      $(this).popover(popOverSettings);
-      });
-      </script>
-      -->
-
-  </body>
+         1.
+               <script>
+               $('document').ready(function() {
+                   var popOverSettings = {
+                       placement: 'top',
+                       selector: '#viv',
+                       title:'Vivienne',
+                       trigger: "click",
+                       content: 'Vivienne is an artist and a bloomy sun puppy.'
+                   };
+               $(this).popover(popOverSettings);
+               });
+               </script>
+         2.
+               <script>
+               $('document').ready(function() {
+               var popOverSettings = {
+                 selector: '#viv',
+                 trigger: "click"
+               };
+               $(this).popover(popOverSettings);
+               });
+               </script>
+-->
+   </body>
 </html>
