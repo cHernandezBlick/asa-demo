@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Boostrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Roboto Font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+   </head>
+<!-- CSS styling --> 
+   <style>
+      html { 
+      background: url(desktopBackground.png) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      }
+      body {
+      background: transparent;         
+      }
+      .navbar-brand {
+      padding-top: 5px;
+      padding-right: 20px; 
+      border-right: 1px black solid;     
+      font-size: 20px;
+      }
+      .navbar {
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+      background: lightgoldenrodyellow;
+      border-bottom: 1px black solid;
+      }
+      .navbar a {
+      color: black;
+      }
+      .dropdown-menu {
+      height: 448px;
+      font-size: 20px;
+      overflow-y: scroll;
+      padding: 0px;
+      border: 1px black solid;
+      border-radius: 0px;
+      margin-top: 8px;
+      margin-left: -17px;
+      }
+      .dropdown-item {
+      padding: 10px;
+      }
+      .dropdown-item:hover {
+      background: lightgoldenrodyellow;     
+      }
+      .container {
+      padding: 100px 0px 20px 0px;
+      text-align: center;
+      }
+      #headerName {
+      font-size: 50px;     
+      padding: 10px;
+      background-color: coral; 
+      border: 1px solid black;
+      }
+      #image1 {
+      margin: 20px 0px 20px 0px;
+      padding: 20px 0px 20px 0px;
+      align-content: center;
+      background-color: white;
+      border: 1px solid black;
+      }
+      .image1 {
+      border: 1px solid black;
+margin-bottom: 15px;
+      }
+      #bio {
+      font-size: 20px;   
+      line-height: 130%;  
+      padding: 50px;
+      text-align: justify;
+      margin: 5px 0px 20px 0px;
+      background-color: darkseagreen; 
+      border: 1px solid black;
+      }
+      .bar1, .bar2, .bar3 {
+      width: 27px;
+      height: 2px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+      }
+      .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+      transform: rotate(-45deg) translate(-6px, 6px);
+      }
+      .change .bar2 {opacity: 0;}
+      .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-5.5px, -5.5px);
+      transform: rotate(45deg) translate(-5.5px, -5.5px);
+      }
+/* Responsive breakpoints for smaller screen sizes */
+      @media (max-width: 576px) {
+      .navbar-brand, .navbar{
+      font-size: 15px;
+      }
+      .dropdown-menu {
+      margin-left: 0px;
+      font-size: 15px;
+      }
+      }
+/* No scrolling bar anywhere */
+      *::-webkit-scrollbar {
+      width: 0px;
+      }
+   </style>
+<!-- Content of website body --> 
+   <body>
+      <nav class="navbar navbar-expand-sm fixed-top">
+         <a class="navbar-brand" href="#">Artists Supporting Artists</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger" onclick="myFunction(this)">
+               <div class="bar1"></div>
+               <div class="bar2"></div>
+               <div class="bar3"></div>
+            </div>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Site Map
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                     <a class="dropdown-item" href="#">Derya</a>
+                     <a class="dropdown-item" href="#">Salem</a>
+                     <a class="dropdown-item" href="#">Vivienne</a>
+                     <a class="dropdown-item" href="#">Cristian</a>
+                     <a class="dropdown-item" href="#">Jaz</a>
+                     <a class="dropdown-item" href="#">Dana</a>
+                     <a class="dropdown-item" href="#">Conor</a>
+                     <a class="dropdown-item" href="#">Nil</a>
+                     <a class="dropdown-item" href="#">Moses</a>
+                     <a class="dropdown-item" href="#">Senaqwila</a>
+                     <a class="dropdown-item" href="#">Kage</a>
+                     <a class="dropdown-item" href="#">Dean</a>
+                     <a class="dropdown-item" href="#">Damla</a>
+                     <a class="dropdown-item" href="#">Haruko</a>
+                     <a class="dropdown-item" href="#">Adassa</a>
+                     <a class="dropdown-item" href="#">Teej</a>
+                     <a class="dropdown-item" href="#">Zion</a>
+                     <a class="dropdown-item" href="#">Hyphea</a>
+                     <a class="dropdown-item" href="#">Thanh</a>
+                     <a class="dropdown-item" href="#">Anita</a>
+                     <a class="dropdown-item" href="#">Grayson</a>
+                     <a class="dropdown-item" href="#">Harmony</a>
+                     <a class="dropdown-item" href="#">Garden Don't Care</a>
+                     <a class="dropdown-item" href="#">Belvedere</a>
+                     <a class="dropdown-item" href="#">Elisabeth Rogers</a>
+                     <a class="dropdown-item" href="#">Sahalli</a>
+                     <a class="dropdown-item" href="#">Mount Pleasant Neighbourhood House</a>
+                     <a class="dropdown-item" href="#">Vines</a>
+                  </div>
+               </li>
+     <li class="nav-item active">
+        <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+      </li>
+     <li class="nav-item active">
+        <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
+      </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="container">
+         <div class="row">
+            <div class="col-12 col-sm-12" id="headerName">DERYA AKAY</div>
+         </div>
+         <div class="row">
+            <div class="col-12 col-sm-12" id="image1"><img class="image1" src="derya/greengrocer.jpg"><figcaption>Green Grocer - Unit 17 (2018)</figcaption></div>
+         </div>
+         <div class="row">
+            <div class="col-12 col-sm-12" id="bio">derya akay is an artist born in turkey in 1988. they live, work, learn & garden on the unceded lands of the musqueam, squamish and tsleil-waututh nations since 2005. derya has been collaborating on gardening & gardening related food projects in their practice and has been working with vivienne, garden don’t care, mt pleasant neighbourhood house, and elisabeth community garden as a part of this project & with salem and cristian on this website. they enjoy dumpster diving, then cooking for large groups of people; learning to write, writing to learn; alley walks & weeds & daydreaming; flavour combinations and hand made objects. derya’s recent exhibitions include “meydan” at polygon gallery, north vancouver (2021); “contact traces'' at the wattis institute, san francisco (2021); and “the neighbour’s plate” with dana qaddah and amna elnour at unit 17, vancouver (2020).</div>
+         </div>
+      </div>
+<!-- Javascript -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+      <script>
+/* JS for hamburger animation */ 
+         function myFunction(x) {
+         x.classList.toggle("change");
+         }
+      </script>
+   </body>
+</html>
