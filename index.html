@@ -30,11 +30,17 @@
       .navbar {
       font-family: "Roboto", sans-serif;
       font-size: 20px;
-      background: lightgoldenrodyellow;
+      background-color: lightskyblue;
       border-bottom: 1px black solid;
       }
       .navbar a {
       color: black;
+      }
+      .dropdown-toggle:hover {
+      color: white;     
+      }
+      #nav-item:hover {
+      text-decoration: underline;
       }
       .dropdown-menu {
       height: 448px;
@@ -50,16 +56,20 @@
       padding: 10px;
       }
       .dropdown-item:hover {
-      background: lightgoldenrodyellow;     
+      background-color: yellowgreen;     
       }
       .container {
       padding: 100px 0px 20px 0px;
       text-align: center;
       }
       .gif {
-      padding: 5px;
+      padding: 15px;
       position: center;
-      width: 150px;        
+      width: 110px;  
+      height: 110px;
+      background-color: lightsalmon;
+      border: 1px black solid;
+      border-radius: 110px;     
       }
       .bioimage {
       padding-bottom: 10px;
@@ -126,7 +136,9 @@
 /* Responsive breakpoints for smaller screen sizes */
       @media (max-width: 576px) {
       .gif {
-      width: 100%;            
+      width: 50px;
+      height: 50px;            
+      padding: 10px;
       }  
       .popover {
       width: 200px;          
@@ -137,6 +149,7 @@
       .dropdown-menu {
       margin-left: 0px;
       font-size: 15px;
+      width: 95%;
       }
       }
 /* No scrolling bar anywhere */
@@ -193,10 +206,10 @@
                   </div>
                </li>
      <li class="nav-item active">
-        <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+        <a class="nav-link" id="nav-item" href="#">About<span class="sr-only">(current)</span></a>
       </li>
      <li class="nav-item active">
-        <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
+        <a class="nav-link" id="nav-item" href="#">Contact<span class="sr-only">(current)</span></a>
       </li>
             </ul>
          </div>
