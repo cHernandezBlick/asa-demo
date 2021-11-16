@@ -90,6 +90,7 @@
 
     .image1 {
         width: 90%;
+        height: 90% !important;
         border: 1px solid black;
         margin-bottom: 15px;
     }
@@ -125,7 +126,49 @@
         -webkit-transform: rotate(45deg) translate(-5.5px, -5.5px);
         transform: rotate(45deg) translate(-5.5px, -5.5px);
     }
+    
+            .white-box {
+            background: white;
+            padding: 3px 0px 0px 0px;
+            border: 1px solid black;
+        }
+
+        .mytable img {
+            width: 500px;
+            height: auto
+        }
+
+        .mytable-responsive {
+            border: none !important;
+        }
+
+        .mytable td {
+            padding-bottom: 0px !important;
+            border: none !important;
+        }
+
+    
     /* Responsive breakpoints for smaller screen sizes */
+    
+           @media(max-width:767px) {
+            .mytable img {
+                width: 250px;
+            }
+
+            .mytable h5 {
+                font-size:16px;
+            }
+
+            .mytable .second-image {
+                width: 121px;
+                border: 1px solid black;
+            }
+            
+             .mytable .third-image {
+            width: 281px;
+            border: 1px solid black;
+            }
+               
     @media (max-width: 576px) {
         .navbar-brand, .navbar {
             font-size: 15px;
@@ -212,58 +255,6 @@
         </div>
     </nav>
 
-    <style>
-        .white-box {
-            background: white;
-            padding: 3px 0px 0px 0px;
-            border: 1px solid black;
-        }
-
-        .mytable img {
-            width: 500px;
-            height: auto
-        }
-
-        .mytable-responsive {
-            border: none !important;
-        }
-
-        .mytable td {
-            padding-bottom: 0px !important;
-            border: none !important;
-        }
-
-        .mytable .second-image {
-            width: 281px;
-            border: 1px solid black;
-        }
-        
-         .mytable .third-image {
-            width: 600px;
-            border: 1px solid black;
-        }
-
-
-        @media(max-width:767px) {
-            .mytable img {
-                width: 250px;
-            }
-
-            .mytable h5{
-                font-size:16px;
-            }
-
-            .mytable .second-image {
-                width: 121px;
-                border: 1px solid black;
-            }
-            
-             .mytable .third-image {
-            width: 281px;
-            border: 1px solid black;
-        }
-        }
-    </style>
 
     <div class="container">
         <div class="row">
